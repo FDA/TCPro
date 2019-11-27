@@ -10,10 +10,15 @@ Most immune responses to biotherapeutic proteins involve the development of anti
 TCPro Dependencies
 
 •	MATLAB Toolboxes: Bioinformatics and Optimization
+
 •	TCPro was written on MATLAB v2017b and tested on v2019b
+
 •	NetMHCIIPan – can be obtained for free from DTU Bioinformatics-Danmark
+
 •	TCPro was tested on v3.2
+
 •	BLAST+
+
 •	TCPro was tested on v2.7.1
 
 
@@ -22,17 +27,29 @@ TCPro Dependencies
 Notes on TCPro
 
 •	TCPro is written in Matlab R2017b
+
 •	TCPro uses Blast+ to identify sequence similarity of a query product against the known set of antigens posted on the IEDB database
+
 •	Our published results are based on Blast v2.7.1 and it can be obtained from https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.7.1/ 
+
 •	TCPro uses NetMHCIIPan v3.2 to evaluate the binding of 15-mer peptides to the MHCII molecules.
+
 •	NetMHCIIPan can be run on UNIX based machines using the source code available from http://www.cbs.dtu.dk/services/NetMHCIIpan/ 
+
 •	Alternatively, users of Windows machines may automatize the query NetMHCIIPan by connecting TCPro with the following IEDB API: http://tools.iedb.org/main/tools-api/ 
+
 How to Run TCPro
+
 •	In the SIMULATION_ENVIRONMENT folder, we provide 15 example biotherapeutic proteins. Results of those proteins are already stored under the output folders of each drug. Users may repeat our simulations or based on our examples, they may run TCPro on a drug that they are interested in.
+
 •	TCPro simulations can be performed on those proteins with runTCPro() command in Matlab. This will read the names of the drugs in folders.dat and simulations will be performed on each drug one by one.
+
 •	Each example drug folder should contain 
+
 •	options.dat: Drug-specific simulation options file
+
 •	sequence.fasta: Protein sequence of the product in FASTA format
+
 •	A comma separated list of HLA-DRB1s of the cohort members (e.g. UniqueWorldCohort.csv)
 
 •	The users need to customize the above three files and folders.dat and run runTCPro(), to test their own products on select donor cohorts.
